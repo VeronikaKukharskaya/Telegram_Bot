@@ -1,0 +1,37 @@
+executor.py [LINE:362] #INFO     [2023-04-10 20:22:15,847] Bot: veron_boot [@veron_pyt_bot]
+executor.py [LINE:358] #WARNING  [2023-04-10 20:22:21,253] Updates were skipped successfully.
+dispatcher.py [LINE:358] #INFO     [2023-04-10 20:22:21,253] Start polling.
+base_events.py [LINE:1744] #ERROR    [2023-04-10 20:22:31,624] Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=FileNotFoundError(2, 'No such file or directory')>
+Traceback (most recent call last):
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "E:\TelegramBot\main.py", line 34, in welcome
+    joinedFile = open('user.txt', 'r')  # создаем файл, куда будет записываться id пользователя
+FileNotFoundError: [Errno 2] No such file or directory: 'user.txt'
+base_events.py [LINE:1744] #ERROR    [2023-04-10 20:23:23,735] Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<Dispatcher._process_polling_updates() done, defined at E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=FileNotFoundError(2, 'No such file or directory')>
+Traceback (most recent call last):
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "E:\TelegramBot\venv\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "E:\TelegramBot\main.py", line 34, in welcome
+    joinedFile = open('user.txt', 'r')  # создаем файл, куда будет записываться id пользователя
+FileNotFoundError: [Errno 2] No such file or directory: 'user.txt'
+dispatcher.py [LINE:433] #INFO     [2023-04-10 20:23:39,871] Stop polling...
+executor.py [LINE:329] #WARNING  [2023-04-10 20:23:39,873] Goodbye!
